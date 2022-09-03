@@ -1,8 +1,8 @@
-# bot discord
 import discord
 from discord.ext import commands
 import random
 import string
+from time import sleep
 
 client = commands.Bot(command_prefix=".", help_command=None, intents = discord.Intents.all())
 
@@ -15,9 +15,6 @@ async def github(ctx):
     await ctx.reply("Hello user there is the github of the communiy : `https://github.com/lilkeep214`")
 
 
-@client.command()
-async def horza(ctx):
-    await ctx.reply("Hello user there is the github of the communiy : `https://github.com/lilkeep214`")
 
 
 
@@ -42,9 +39,37 @@ async def gen(ctx):
 
 @client.command()
 async def help(ctx):
-    embed = discord.Embed(title="👹 HELP 👹", description="__*This is just the alpha of the bot*__\n1- `.github` : get the github of the community\n2- `.gen` : try to get a nitro\n3- `.support` : put the link of the server in your bio and get the role **😈・SUPPORT**\n3- `.invite` : join the server\nBot code made by horza team.")
+    embed = discord.Embed(title="✨ HELP ✨", description="__*This is just the alpha of the bot*__\n1- `.github` : get the github of the community\n2- `.gen` : try to get a nitro\n3- `.support` : put the link of the server in your bio and get the role **😈・SUPPORT**\n3- `.invite` : join the server\n4- **Reminder** :\n  -`.reminder1hour` : send you a message when 1 hour elapsed\n    -`.remind2hour` : send you a message when 2 hours elapsed\n -`.remind3hour` : send you a message when 3 hours elapsed\n**Source** \n`.source_code` to access of the code !")
     await ctx.reply(embed=embed)
     
+@client.command()
+async def hoza(ctx):
+    await ctx.send("Wait **5** seconds...") 
+    sleep(5)
+    await ctx.reply("Coming soon...")
+
+@client.command()
+async def reminder1hour(ctx):
+    await ctx.send("Reminder succefull saved ✔")
+    sleep(3600)
+    await ctx.reply("Hey **1** hour elapsed elapsed 🕛!")
+
+@client.command()
+async def reminder2hour(ctx):
+    await ctx.send("Reminder succefull saved ✔")
+    sleep(7200)
+    await ctx.reply("Hey **2** hours elapsed 🕛!")
+
+@client.command()
+async def reminder3hour(ctx):
+    await ctx.send("Reminder succefull saved ✔")
+    sleep(14400)
+    await ctx.reply("Hey **3** hours elapsed 🕛!")
+
+
+@client.command()
+async def source_code(ctx):
+    await ctx.reply("https://github.com/lilkeep214/Horza")
     
     
 
